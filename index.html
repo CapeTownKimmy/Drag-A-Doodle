@@ -8,35 +8,37 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <img id="backgroundBlur" src="./images/backgroundBlur.jpg" alt="Blurred background image of colours">
     <div id="mainContainer"> <!-- Background Image Container -->
 
         <h1>Drag - A - Doodle</h1>
-
+    
         <div id="controlsContainer"> <!-- Container to hold control panel -->
-
+    
             <div> <!-- Grid size container -->
                 <h3>Grid Size:</h3>
                 <img src="./images/hashLargeIcon.png" alt="Small grid icon">
                 <input type="range" name="gridSlider" id="gridSlider">
                 <img src="./images/hashSmallIcon.png" alt="Large grid icon">
             </div>
-
+    
             <div> <!-- Colour picker container -->
                 <h3>Colour Picker:</h3>
                 <div class="colorBox"></div>
             </div>
-            
+                
             <div> <!-- Button container -->
                 <button id="resetBtn" class="buttons">Reset</button>
                 <button id="eraseBtn" class="buttons">Eraser</button>
             </div>
         </div>
-
+    
         <div id="gridContainer"> <!-- Grid Container -->
-
+    
         </div>
-        
+    
     </div>
+
     <script src="./script.js"></script>
 </body>
 </html>

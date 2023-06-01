@@ -1,0 +1,33 @@
+
+
+/* Global Styling */
+* {
+    margin: 0;
+}
+
+/* ------------ Main Container Styling - Background------------ */
+#backgroundBlur {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+/* ------------ Main Container Styling - Background------------ */
+#mainContainer {
+    background-image: url(images/sketchBookMultiSmaller.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+
+
+
+/* ------------ Main Container Styling ------------ */
+/* ------------ Main Container Styling ------------ */
+/* ------------ Main Container Styling ------------ */
+/* ------------ Main Container Styling ------------ */
+/* ------------ Main Container Styling ------------ */
