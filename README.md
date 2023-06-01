@@ -5,7 +5,7 @@ This challenge is part of The Odin Projects foundation course, it gives basic pr
 
 ---
 
-I have kept my initial design quite simple and open so that I can adapt as needed. Controls and selection on the left and the grid onn the right of the notebook.
+I have kept my initial design quite simple and open so that I can adapt as needed. Controls and selection on the left and the grid on the right of the notebook.
 
 ![Image](./images/drag-a-doodle.jpg)
 
