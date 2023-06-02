@@ -1,33 +1,153 @@
+/* font-family: 'Fredericka the Great', cursive; */
 
-
-/* Global Styling */
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ------------ Main Container Styling - Background------------ */
-#backgroundBlur {
-    width: 100vw;
+/* FONTS */
+h1, h2, button {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+
+/* Background Image - Blur */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    position: absolute;
-    z-index: -1;
-}
-
-/* ------------ Main Container Styling - Background------------ */
-#mainContainer {
-    background-image: url(images/sketchBookMultiSmaller.jpg);
-    background-size: contain;
-    background-position: center;
+    background-image: url(./images/backgroundBlur.jpg);
     background-repeat: no-repeat;
-    height: 100vh;
+    background-size: cover;
 }
 
 
+/* Game Container Full */
+#onTopContainer {
+    border: 1px solid blue;
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+/* Game Image Background */
+.backgroundImg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Title - Main */
+h1 {
+    font-size: 3rem;
+    border: 1px solid red;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+}
 
 
+/* Game Container for FlexBox */
+#flexGameContainer {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: absolute; 
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+}
 
-/* ------------ Main Container Styling ------------ */
-/* ------------ Main Container Styling ------------ */
-/* ------------ Main Container Styling ------------ */
-/* ------------ Main Container Styling ------------ */
-/* ------------ Main Container Styling ------------ */
+/* Game Controls Box */
+#controlBox {
+    border: 1px solid red;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Grid Container Display */
+#gridDisplayBox {
+    border: 1px solid purple;
+    height: 350px;
+    width: 350px;
+}
+
+/* Individual Control Boxes */
+.gridSizeBox, .colorPickerBox, .buttonsBox {
+    border: 1px solid blue;
+    text-align: center;
+    align-self: stretch;
+}
+.gridIconsAndSlider, .buttonsBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Control Headings */
+h2 {
+    font-size: 1.3rem;
+    padding: .7rem 0;
+}
+
+/* Buttons Styling */
+.buttonsBox button {
+    background-color: #b8b8b8;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .3rem 0;
+    width: 6rem;
+}
+
+
+/* Grid Icon Styling */
+.icons {
+    border: 1px solid purple;
+    width: 2.5rem;
+}
+#largeHash {
+    padding-left: .8rem;
+}
+#smallHash {
+    padding-right: .8rem;
+}
+
+/* Slider Styling */
+#gridSlider {
+    appearance: none;
+    width: 70%;
+    height: 15px;
+    margin: 0 auto;
+    border-radius: 5px;  
+    background: #b8b8b8;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+#gridSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 28px;
+    border-radius: 5px; 
+    background: #9b9b9b;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #3b3b3b;
+    border: 2px solid #c9c9c9;
+}
+#gridSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #b8b8b8;
+    cursor: pointer;
+}
+

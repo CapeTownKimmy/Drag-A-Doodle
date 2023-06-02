@@ -6,38 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drag - A - Doodle</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img id="backgroundBlur" src="./images/backgroundBlur.jpg" alt="Blurred background image of colours">
-    <div id="mainContainer"> <!-- Background Image Container -->
+    
 
+    <div id="onTopContainer">
+        <img class="backgroundImg" src="./images/sketchBookMulti2.jpg" alt="Top down image of notebook on colourful background">
         <h1>Drag - A - Doodle</h1>
-    
-        <div id="controlsContainer"> <!-- Container to hold control panel -->
-    
-            <div> <!-- Grid size container -->
-                <h3>Grid Size:</h3>
-                <img src="./images/hashLargeIcon.png" alt="Small grid icon">
-                <input type="range" name="gridSlider" id="gridSlider">
-                <img src="./images/hashSmallIcon.png" alt="Large grid icon">
+
+        <div id="flexGameContainer">
+            <div id="controlBox">
+                <div class="gridSizeBox">
+                    <h2>Grid Size:</h2>
+                    <div class="gridIconsAndSlider">
+                        <img class="icons" id="largeHash" src="./images/hashLargeIcon.png" alt="Large grid size">
+                        <input type="range" name="slider" id="gridSlider">
+                        <img class="icons" id="smallHash" src="./images/hashSmallIcon.png" alt="Small grid size"> 
+                    </div>
+                </div>
+                <div class="colorPickerBox">
+                    <h2>Colour Picker</h2>
+                    <div>Placeholder</div>
+                </div>
+                <div class="buttonsBox">
+                    <button id="resetBtn">Reset</button>
+                    <button id="eraserBtn">Eraser</button>
+                </div>
             </div>
-    
-            <div> <!-- Colour picker container -->
-                <h3>Colour Picker:</h3>
-                <div class="colorBox"></div>
-            </div>
+            <div id="gridDisplayBox">
                 
-            <div> <!-- Button container -->
-                <button id="resetBtn" class="buttons">Reset</button>
-                <button id="eraseBtn" class="buttons">Eraser</button>
             </div>
         </div>
-    
-        <div id="gridContainer"> <!-- Grid Container -->
-    
-        </div>
-    
+
     </div>
+
 
     <script src="./script.js"></script>
 </body>
