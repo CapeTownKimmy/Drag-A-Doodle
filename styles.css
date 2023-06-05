@@ -25,7 +25,7 @@ body {
 }
 
 
-/* Game Container Full */
+/*  ------------------ Game Container Full ------------------  */
 #onTopContainer {
     border: 1px solid blue;
     position: relative;
@@ -39,7 +39,7 @@ body {
     max-width: 100%;
 }
 
-/* Title - Main */
+/* Title - Main - Drag-A-Doodle */
 h1 {
     font-size: 3rem;
     border: 1px solid red;
@@ -50,34 +50,32 @@ h1 {
 }
 
 
-/* Game Container for FlexBox */
+/* ------------------ Game Container for FlexBox ------------------  */
 #flexGameContainer {
     border: 1px solid black;
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    /* gap: 2rem; */
     position: absolute; 
     top: 25%;
     left: 50%;
     transform: translate(-50%);
+    height: 48%;
+    width: 65%;
 }
 
-/* Game Controls Box */
+/* -------- Game Controls Box -------- */
 #controlBox {
     border: 1px solid red;
-    height: 350px;
-    width: 350px;
+    /* height: 350px;
+    width: 350px; */
+    /* height: 350px; */
+    width: 50%;
+    padding-right: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-/* Grid Container Display */
-#gridDisplayBox {
-    border: 1px solid purple;
-    height: 350px;
-    width: 350px;
 }
 
 /* Individual Control Boxes */
@@ -90,6 +88,11 @@ h1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.colorPickerBox div {
+    border: 1px solid purple;
+    width: 19rem;       /* Replace with responsive sizing */
+    height: 3rem;       /* Replace with responsive sizing */
 }
 
 /* Control Headings */
@@ -112,13 +115,15 @@ h2 {
 /* Grid Icon Styling */
 .icons {
     border: 1px solid purple;
-    width: 2.5rem;
+    width: 2.7rem;
 }
 #largeHash {
     padding-left: .8rem;
+    padding-right: .5rem;
 }
 #smallHash {
     padding-right: .8rem;
+    padding-left: .5rem;
 }
 
 /* Slider Styling */
@@ -151,3 +156,14 @@ h2 {
     cursor: pointer;
 }
 
+/* ------------------ Doodle Grid Container ------------------ */
+#gridDisplayBox {
+    display: grid;
+    width: 50%;
+    padding-left: 2.5rem;
+}
+.gridBlock {
+    border: 1px solid #c4c4c4;
+    background-color: #c9c9c9;
+
+}
