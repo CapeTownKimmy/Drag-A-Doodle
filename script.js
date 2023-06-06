@@ -1,16 +1,15 @@
 const gridDisplayBox = document.getElementById('gridDisplayBox');
 
 
-// Make divs for grid //
-
-// function createDiv(){
-//     const gridItem = document.createElement('div');
-//     gridItem.setAttribute('class', 'gridBlock');
-//     gridDisplayBox.appendChild(gridItem);
-// }
-// createDiv();
+// ---------- EVENT LISTENERS ---------- //
+gridDisplayBox.addEventListener('mousedown', () => {
+    gridDisplayBox.addEventListener('mousemove', draw);
+    gridDisplayBox.addEventListener('mouseup', stopDraw);
+})
 
 
+
+// ---------- FUNCTION CREATE GRID ---------- //
 
 function createDiv(num){
     let gridArea = num * num;
@@ -23,3 +22,14 @@ function createDiv(num){
     } 
 }
 createDiv(24);
+
+
+// ------- DRAWING FUNCTIONS ------- //
+function draw(e){
+    e.preventDefault();
+    e.target.style.backgroundColor = '#3b3b3b';
+}
+function stopDraw(e) {
+    gridDisplayBox.removeEventListener('mousemove', draw);
+}
+
