@@ -1,14 +1,19 @@
 const gridDisplayBox = document.getElementById('gridDisplayBox');   // Grid Selection //
 const sliderValue = document.getElementById('gridSlider');
+const resetBtn = document.getElementById('resetBtn');
 
 
+// STARTER - DEFAULT GRID //
+const defaultValue = 56;
+createDiv(defaultValue);
 
 // ---------- RETRIEVE SLIDER VALUE FOR GRID GENERATION ---------- //
 
 sliderValue.addEventListener('mouseup', () => {
+    resetGrid();
     let num = sliderValue.value;
-    console.log(num);
     createDiv(num);
+    // console.log(num);
 })
 
 
@@ -28,7 +33,11 @@ function createDiv(num){
 
 
 // ---------- CLEAR GRID FUNCTION---------- //
-
+function resetGrid() {
+    while (gridDisplayBox.firstChild) {
+        gridDisplayBox.removeChild(gridDisplayBox.lastChild)
+    }
+}
 
 
 
@@ -51,4 +60,8 @@ function stopDraw(e) {
 }
 
 
-
+// ---------- RESET BUTTON - EVENT LISTENERS ---------- //
+resetBtn.addEventListener('click', () => {
+    resetGrid();
+    createDiv(sliderValue.value);
+});
