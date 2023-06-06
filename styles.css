@@ -27,7 +27,7 @@ body {
 
 /*  ------------------ Game Container Full ------------------  */
 #onTopContainer {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     position: relative;
     max-height: 100%;
     max-width: 100%;
@@ -55,7 +55,7 @@ h1 {
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
-    /* gap: 4rem; */
+    gap: 13%;
     position: absolute; 
     top: 25%;
     left: 50%;
@@ -66,12 +66,8 @@ h1 {
 
 /* -------- Game Controls Box -------- */
 #controlBox {
-    border: 1px solid red;
-    /* height: 350px;
-    width: 350px; */
-    /* height: 350px; */
+    /* border: 1px solid red; */
     width: 50%;
-    padding-right: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,7 +76,7 @@ h1 {
 
 /* Individual Control Boxes */
 .gridSizeBox, .colorPickerBox, .buttonsBox {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     text-align: center;
     align-self: stretch;
 }
@@ -91,8 +87,8 @@ h1 {
 }
 .colorPickerBox div {
     border: 1px solid purple;
-    width: 19rem;       /* Replace with responsive sizing */
-    height: 3rem;       /* Replace with responsive sizing */
+    width: 100%;       
+    height: auto;       
 }
 
 /* Control Headings */
@@ -114,7 +110,7 @@ h2 {
 
 /* Grid Icon Styling */
 .icons {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     width: 2.7rem;
 }
 #largeHash {
@@ -158,13 +154,12 @@ h2 {
 
 /* ------------------ Doodle Grid Container ------------------ */
 #gridDisplayBox {
-    border: 1px solid greenyellow;
+    border: 2px solid #3b3b3b;
     display: grid;
     width: 50%;
-    padding-left: 2.5rem;
 }
 .gridBlock {
     border: 1px solid #c4c4c4;
     background-color: #c9c9c9;
-
+    cursor: crosshair;
 }

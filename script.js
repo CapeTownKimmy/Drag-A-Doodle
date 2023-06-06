@@ -1,15 +1,19 @@
-const gridDisplayBox = document.getElementById('gridDisplayBox');
+const gridDisplayBox = document.getElementById('gridDisplayBox');   // Grid Selection //
+const sliderValue = document.getElementById('gridSlider');
 
 
-// ---------- EVENT LISTENERS ---------- //
-gridDisplayBox.addEventListener('mousedown', () => {
-    gridDisplayBox.addEventListener('mousemove', draw);
-    gridDisplayBox.addEventListener('mouseup', stopDraw);
+
+// ---------- RETRIEVE SLIDER VALUE FOR GRID GENERATION ---------- //
+
+sliderValue.addEventListener('mouseup', () => {
+    let num = sliderValue.value;
+    console.log(num);
+    createDiv(num);
 })
 
 
 
-// ---------- FUNCTION CREATE GRID ---------- //
+// ---------- GENERATE GRID FUNCTION---------- //
 
 function createDiv(num){
     let gridArea = num * num;
@@ -21,7 +25,20 @@ function createDiv(num){
         gridDisplayBox.appendChild(gridDiv);
     } 
 }
-createDiv(24);
+
+
+// ---------- CLEAR GRID FUNCTION---------- //
+
+
+
+
+
+// ---------- EVENT LISTENERS - FOR DRAWING---------- //
+gridDisplayBox.addEventListener('mousedown', () => {
+    gridDisplayBox.addEventListener('mousemove', draw);
+    gridDisplayBox.addEventListener('mouseup', stopDraw);
+})
+
 
 
 // ------- DRAWING FUNCTIONS ------- //
@@ -32,4 +49,6 @@ function draw(e){
 function stopDraw(e) {
     gridDisplayBox.removeEventListener('mousemove', draw);
 }
+
+
 
