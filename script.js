@@ -4,6 +4,11 @@ const resetBtn = document.getElementById('resetBtn');               // Reset But
 const eraseBtn = document.getElementById('eraseBtn');               // Erase Button
 
 
+let defaultColor = document.getElementById('colorPicker');          // Default colour to start drawing
+let newColor                                                        // Change colour with colour picker
+
+
+
 // ******* STARTER - DEFAULT GRID ******* //
 const defaultValue = 56;
 createDiv(defaultValue);
@@ -14,7 +19,6 @@ sliderValue.addEventListener('mouseup', () => {
     resetGrid();
     let num = sliderValue.value;
     createDiv(num);
-    // console.log(num);
 })
 
 
@@ -54,7 +58,11 @@ gridDisplayBox.addEventListener('mousedown', () => {
 // ******* ------- DRAWING FUNCTIONS ------- ******* //
 function draw(e){
     e.preventDefault();
-    e.target.style.backgroundColor = '#3b3b3b';
+    if(newColor){
+        e.target.style.backgroundColor = newColor;
+    } else {
+        e.target.style.backgroundColor = '#81c2bd';
+    }  
 }
 function stopDraw(e) {
     gridDisplayBox.removeEventListener('mousemove', draw);
@@ -94,4 +102,10 @@ function erase(e){
     }
 
 
+// ******* ---------- COLOUR PICKER---------- ******* //  
+
+defaultColor.addEventListener('input', (e) => {
+    newColor = e.target.value;
+    console.log(newColor);
+});
 

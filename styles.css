@@ -25,7 +25,7 @@ body {
 }
 
 
-/*  ------------------ Game Container Full ------------------  */
+/*  ------------------ GAME CONTAINER FULL ------------------  */
 #onTopContainer {
     /* border: 1px solid blue; */
     position: relative;
@@ -50,7 +50,7 @@ h1 {
 }
 
 
-/* ------------------ Game Container for FlexBox ------------------  */
+/* ------------------ GAME CONTAINER for FlexBox ------------------  */
 #flexGameContainer {
     border: 1px solid black;
     display: flex;
@@ -64,7 +64,7 @@ h1 {
     width: 65%;
 }
 
-/* -------- Game Controls Box -------- */
+/* -------- GAME CONTROLS BOX -------- */
 #controlBox {
     /* border: 1px solid red; */
     width: 50%;
@@ -85,11 +85,11 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
-.colorPickerBox div {
+/* .colorPickerBox div {
     border: 1px solid purple;
     width: 100%;       
     height: auto;       
-}
+} */
 
 /* Control Headings */
 h2 {
@@ -152,7 +152,26 @@ h2 {
     cursor: pointer;
 }
 
-/* ------------------ Doodle Grid Container ------------------ */
+
+/* ------------------ COLOUR PICKER STYLES ------------------ */
+#colorPicker {
+    border-radius: 8px;
+    width: 100%;       
+    height: 60px; 
+    border: 1px solid #c4c4c4;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+#colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+#colorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 8px;
+}
+
+/* ------------------ DOODLE GRID CONTAINER ------------------ */
 #gridDisplayBox {
     border: 2px solid #3b3b3b;
     display: grid;
