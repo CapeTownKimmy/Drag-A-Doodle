@@ -42,7 +42,7 @@ body {
 /* Title - Main - Drag-A-Doodle */
 h1 {
     font-size: 3rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
     top: 5%;
     left: 50%;
@@ -52,7 +52,7 @@ h1 {
 
 /* ------------------ GAME CONTAINER for FlexBox ------------------  */
 #flexGameContainer {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
     gap: 13%;
@@ -85,16 +85,15 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
-/* .colorPickerBox div {
-    border: 1px solid purple;
-    width: 100%;       
-    height: auto;       
-} */
+
 
 /* Control Headings */
 h2 {
     font-size: 1.3rem;
     padding: .7rem 0;
+}
+.padding {
+    padding: 0 12.8px;
 }
 
 /* Buttons Styling */
@@ -154,10 +153,15 @@ h2 {
 
 
 /* ------------------ COLOUR PICKER STYLES ------------------ */
-#colorPicker {
-    border-radius: 8px;
+.colorPickerBox {
+    /* border: 1px solid purple; */
     width: 100%;       
-    height: 60px; 
+    height: auto;       
+}
+#colorPicker {
+    border-radius: 5px;
+    width: 60%;       
+    height: 4rem; 
     border: 1px solid #c4c4c4;
     outline: none;
     appearance: none;
@@ -168,17 +172,84 @@ h2 {
 }
 #colorPicker::-webkit-color-swatch {
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
+}
+#colorItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+/* ------------------ GRID TOGGLE ------------------ */
+#gridToggle {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b8b8b8;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 5px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    left: 20px;
+    bottom: -6px;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    width: 12px;
+    height: 24px;
+    border-radius: 5px; 
+    background: #9b9b9b;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #3b3b3b;
+    border: 2px solid #c9c9c9;
+  }
+  input:checked + .slider {
+    background-color: #4e4e4e;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-17px);
+    -ms-transform: translateX(-17px);
+    transform: translateX(-17px);
+  }
+
+.toggleText {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+    font-size: .7rem;
+    padding: 0 .8rem;
+}
 /* ------------------ DOODLE GRID CONTAINER ------------------ */
 #gridDisplayBox {
-    border: 2px solid #3b3b3b;
+    border: 2px solid #c4c4c4;
     display: grid;
     width: 50%;
 }
 .gridBlock {
-    border: 1px solid #c4c4c4;
     background-color: #c9c9c9;
     cursor: crosshair;
 }
+

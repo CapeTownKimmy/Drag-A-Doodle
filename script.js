@@ -2,7 +2,7 @@ const gridDisplayBox = document.getElementById('gridDisplayBox');   // Grid Sele
 const sliderValue = document.getElementById('gridSlider');          // Slider
 const resetBtn = document.getElementById('resetBtn');               // Reset Button
 const eraseBtn = document.getElementById('eraseBtn');               // Erase Button
-
+const gridToggle = document.getElementById('toggle');
 
 let defaultColor = document.getElementById('colorPicker');          // Default colour to start drawing
 let newColor                                                        // Change colour with colour picker
@@ -34,6 +34,22 @@ function createDiv(num){
         gridDisplayBox.style.gridTemplateRows = `repeat(${num}, 1fr))`;
         gridDisplayBox.appendChild(gridDiv);
     } 
+}
+
+// ******* ---------- GRID TOGGLE FUNCTION---------- ******* //
+gridToggle.addEventListener('change', gridOff);
+
+function gridOff(){
+    let gridBlocks = document.querySelectorAll('div.gridBlock');
+    if(gridToggle.checked) {
+        for (element of gridBlocks) {
+            element.style.border = '1px solid #c4c4c4';
+        }
+    } else {
+        for (element of gridBlocks) {
+            element.style.border = '1px solid #c9c9c9';
+        }
+    }
 }
 
 
@@ -106,6 +122,5 @@ function erase(e){
 
 defaultColor.addEventListener('input', (e) => {
     newColor = e.target.value;
-    console.log(newColor);
 });
 

@@ -28,17 +28,30 @@
                         <img class="icons" id="smallHash" src="./images/hashSmallIcon.png" alt="Small grid size"> 
                     </div>
                 </div>
+  
+                <div id="gridToggle">
+                    <h2 class="padding">Grid:</h2>
+                    <h3 class="toggleText" for="toggle">On</h3>
+                    <label class="switch">
+                        <input type="checkbox" checked id="toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <h3 class="toggleText" for="toggle">Off</h3>
+                </div>
+
                 <div class="colorPickerBox">
-                    <h2>Colour Picker:</h2>
-                    <div>
+                    <div id="colorItems">
+                        <h2 class="padding">Colour:</h2>
                         <input type="color" name="colorPicker" id="colorPicker" value="#81C2BD">
                     </div>
                 </div>
+                
                 <div class="buttonsBox">
                     <button id="resetBtn">Reset</button>
                     <button id="eraseBtn">Erase</button>
                 </div>
             </div>
+
             <div id="gridDisplayBox">
                 
             </div>
