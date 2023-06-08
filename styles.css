@@ -92,9 +92,7 @@ h2 {
     font-size: 1.3rem;
     padding: .7rem 0;
 }
-/* .padding {
-    padding: 0 12.8px;
-} */
+
 
 /* Buttons Styling */
 .buttonsBox button {
@@ -275,6 +273,85 @@ h2 {
 
 /* ------------------ MEDIA QUERIES ------------------ */
 
+@media only screen and (max-width: 599px) {
+body {
+    justify-content: flex-start;
+}
+h1 {
+    font-size: 2.1rem;
+    position:absolute;
+    top: 1%;
+}
+#onTopContainer {
+    position: static;
+    height: 100%;
+    width: 100%;
+}
+#gridDisplayBox {
+    width: 80%;
+    height: 35%;
+}
+#flexGameContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
+    position: relative; 
+    top: 7%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+}
+.backgroundImg {
+    display: none;
+}
+#controlBox {
+    width: 80%;
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+@media only screen and (min-width: 600px){
+    h1 {
+        font-size: 2.2rem;
+    }  
+    h2 {
+        font-size: .8rem;
+    }  
+    .toggleText {
+        font-size: .5rem;
+    } 
+    #colorPicker {
+        height: 1.8rem;
+    }
+    .buttonsBox button {
+        font-size: .8rem;
+        padding: .1rem 0;
+        width: 4rem;
+    }    
+}@media only screen and (min-width: 700px){
+    h1 {
+        font-size: 2.3rem;
+    }  
+    h2 {
+        font-size: .8rem;
+    }  
+    .toggleText {
+        font-size: .5rem;
+    } 
+    #colorPicker {
+        height: 1.8rem;
+    }
+    .buttonsBox button {
+        font-size: .8rem;
+        padding: .1rem 0;
+        width: 4rem;
+    }    
+}
 @media only screen and (min-width: 750px){
     h1 {
         font-size: 2.5rem;
