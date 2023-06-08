@@ -92,9 +92,9 @@ h2 {
     font-size: 1.3rem;
     padding: .7rem 0;
 }
-.padding {
+/* .padding {
     padding: 0 12.8px;
-}
+} */
 
 /* Buttons Styling */
 .buttonsBox button {
@@ -104,8 +104,17 @@ h2 {
     font-size: 1rem;
     padding: .3rem 0;
     width: 6rem;
+    cursor: pointer;
 }
-
+.buttonsBox button:hover {
+    background-color: #a7a7a7;
+    border: 1px solid #727272;
+}
+.buttonsBox button:active {
+    background-color: #a7a7a7;
+    border: 1px solid #727272;
+    scale: 0.95;
+}
 
 /* Grid Icon Styling */
 .icons {
@@ -176,8 +185,9 @@ h2 {
 }
 #colorItems {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 14%;
 }
 
 /* ------------------ GRID TOGGLE ------------------ */
@@ -187,6 +197,13 @@ h2 {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    gap: 16%;
+}
+.flexToggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 5.5rem; */
 }
 .switch {
     position: relative;
@@ -253,3 +270,144 @@ h2 {
     cursor: crosshair;
 }
 
+
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media only screen and (min-width: 750px){
+    h1 {
+        font-size: 2.5rem;
+    }  
+    h2 {
+        font-size: .9rem;
+    }  
+    .toggleText {
+        font-size: .6rem;
+    } 
+    #colorPicker {
+        height: 2rem;
+    }
+    .buttonsBox button {
+        font-size: .9rem;
+        padding: .2rem 0;
+        width: 5rem;
+    }    
+}
+@media only screen and (min-width: 800px){
+    h1 {
+        font-size: 2.7rem;
+    } 
+    h2 {
+        font-size: 1rem;
+    }  
+    #colorPicker {
+        height: 2.5rem;
+    }  
+}
+@media only screen and (min-width: 900px){
+    h1 {
+        font-size: 3.25rem;
+    } 
+    h2 {
+        font-size: 1.1rem;
+    }    
+    #colorPicker {
+        height: 3rem;
+    }
+    .buttonsBox button {
+        font-size: 1rem;
+        padding: .3rem 0;
+        width: 6rem;
+    } 
+}
+@media only screen and (min-width: 1100px){
+    h1 {
+        font-size: 3.5rem;
+    } 
+    h2 {
+        font-size: 1.2rem;
+    }  
+    #colorPicker {
+        height: 3.5rem;
+    }
+    .buttonsBox button {
+        font-size: 1.1rem;
+        padding: .4rem 0;
+        width: 7rem;
+    }  
+}
+@media only screen and (min-width: 1200px){
+    h1 {
+        font-size: 4rem;
+    }   
+    h2 {
+        font-size: 1.3rem;
+    }  
+    .toggleText {
+        font-size: .9rem;
+    }
+    #colorPicker {
+        height: 4rem;
+    } 
+}
+@media only screen and (min-width: 1350px) {
+    h2 {
+        font-size: 1.5rem;
+    } 
+    .buttonsBox button {
+        font-size: 1.1rem;
+        padding: .4rem 0;
+        width: 7rem;
+    }  
+    #colorPicker {
+        height: 4.3rem;
+    }
+}
+@media only screen and (min-width: 1450px){
+    h1 {
+        font-size: 4.5rem;
+    }  
+    h2 {
+        font-size: 1.6rem;
+    }  
+    .toggleText {
+        font-size: 1rem;
+    }
+    .buttonsBox button {
+        font-size: 1.2rem;
+        padding: .5rem 0;
+        width: 8rem;
+    }
+    #colorPicker {
+        height: 4.5rem;
+    }
+}
+@media only screen and (min-width: 1600px){
+    h1 {
+        font-size: 5rem;
+    } 
+    h2 {
+        font-size: 1.7rem;
+    }  
+    .toggleText {
+        font-size: 1.1rem;
+    }  
+    #colorPicker {
+        height: 4.8rem;
+    }
+}
+@media only screen and (min-width: 1800px){
+    h1 {
+        font-size: 5.5rem;
+    }  
+    h2 {
+        font-size: 1.9rem;
+    }  
+    .toggleText {
+        font-size: 1.2rem;
+    } 
+    #colorPicker {
+        height: 8rem;
+    }
+}

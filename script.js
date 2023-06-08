@@ -32,6 +32,7 @@ function createDiv(num){
         gridDiv.setAttribute('class', 'gridBlock');
         gridDisplayBox.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
         gridDisplayBox.style.gridTemplateRows = `repeat(${num}, 1fr))`;
+        gridDiv.style.border = '1px solid #c4c4c4';
         gridDisplayBox.appendChild(gridDiv);
     } 
 }
