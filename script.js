@@ -78,7 +78,7 @@ function draw(e){
     if(newColor){
         e.target.style.backgroundColor = newColor;
     } else {
-        e.target.style.backgroundColor = '#81c2bd';
+        e.target.style.backgroundColor = '#945ec9';
     }  
 }
 function stopDraw(e) {

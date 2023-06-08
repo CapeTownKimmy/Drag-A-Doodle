@@ -85,6 +85,12 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
+.buttonsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
 
 
 /* Control Headings */
