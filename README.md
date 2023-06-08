@@ -12,7 +12,7 @@ I have made the game as responsive to screen size as possible but best displayed
 * Toggle your grid lines on or off, even while you draw!
 * Pick as many colours as you wish
 * Just drag to draw and erase!
-#### Create your own: **[Play Here!]()**
+#### Create your own: **[Play Here!](https://capetownkimmy.github.io/Drag-A-Doodle/)**
 
 ![Screenshot of game UI](./images/Screenshot-start.jpg)
 
