@@ -1,0 +1,496 @@
+/* font-family: 'Fredericka the Great', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTS */
+h1, h2, button {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+}
+
+/* Background Image - Blur */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(./images/backgroundBlur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*  ------------------ GAME CONTAINER FULL ------------------  */
+#onTopContainer {
+    /* border: 1px solid blue; */
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+/* Game Image Background */
+.backgroundImg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Title - Main - Drag-A-Doodle */
+h1 {
+    font-size: 3rem;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+/* ------------------ GAME CONTAINER for FlexBox ------------------  */
+#flexGameContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    gap: 13%;
+    position: absolute; 
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 48%;
+    width: 65%;
+}
+
+/* -------- GAME CONTROLS BOX -------- */
+#controlBox {
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Individual Control Boxes */
+.gridSizeBox, .colorPickerBox, .buttonsBox {
+    /* border: 1px solid blue; */
+    text-align: center;
+    align-self: stretch;
+}
+.gridIconsAndSlider, .buttonsBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttonsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+
+/* Control Headings */
+h2 {
+    font-size: 1.3rem;
+    padding: .7rem 0;
+}
+
+
+/* Buttons Styling */
+.buttonsBox button {
+    background-color: #b8b8b8;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .3rem 0;
+    width: 6rem;
+    cursor: pointer;
+}
+.buttonsBox button:hover {
+    background-color: #a7a7a7;
+    border: 1px solid #727272;
+}
+.buttonsBox button:active {
+    background-color: #a7a7a7;
+    border: 1px solid #727272;
+    scale: 0.95;
+}
+
+/* Grid Icon Styling */
+.icons {
+    /* border: 1px solid purple; */
+    width: 2.7rem;
+}
+#largeHash {
+    padding-left: .8rem;
+    padding-right: .5rem;
+}
+#smallHash {
+    padding-right: .8rem;
+    padding-left: .5rem;
+}
+
+/* Slider Styling */
+#gridSlider {
+    appearance: none;
+    width: 70%;
+    height: 15px;
+    margin: 0 auto;
+    border-radius: 5px;  
+    background: #b8b8b8;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+#gridSlider::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 28px;
+    border-radius: 5px; 
+    background: #9b9b9b;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #3b3b3b;
+    border: 2px solid #c9c9c9;
+}
+#gridSlider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #b8b8b8;
+    cursor: pointer;
+}
+
+
+/* ------------------ COLOUR PICKER STYLES ------------------ */
+.colorPickerBox {
+    /* border: 1px solid purple; */
+    width: 100%;       
+    height: auto;       
+}
+#colorPicker {
+    border-radius: 5px;
+    width: 60%;       
+    height: 4rem; 
+    border: 1px solid #c4c4c4;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+}
+#colorPicker::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+#colorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 5px;
+}
+#colorItems {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14%;
+}
+
+/* ------------------ GRID TOGGLE ------------------ */
+#gridToggle {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 16%;
+}
+.flexToggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 5.5rem; */
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #b8b8b8;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 5px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    left: 20px;
+    bottom: -6px;
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    width: 12px;
+    height: 24px;
+    border-radius: 5px; 
+    background: #9b9b9b;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #3b3b3b;
+    border: 2px solid #c9c9c9;
+  }
+  input:checked + .slider {
+    background-color: #4e4e4e;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-17px);
+    -ms-transform: translateX(-17px);
+    transform: translateX(-17px);
+  }
+
+.toggleText {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: 400;
+    font-size: .7rem;
+    padding: 0 .8rem;
+}
+/* ------------------ DOODLE GRID CONTAINER ------------------ */
+#gridDisplayBox {
+    border: 2px solid #c4c4c4;
+    display: grid;
+    width: 50%;
+}
+.gridBlock {
+    background-color: #c9c9c9;
+    cursor: crosshair;
+}
+
+
+
+
+/* ------------------ MEDIA QUERIES ------------------ */
+
+@media only screen and (max-width: 599px) {
+body {
+    justify-content: flex-start;
+}
+h1 {
+    font-size: 2.1rem;
+    position:absolute;
+    top: 1%;
+}
+#onTopContainer {
+    position: static;
+    height: 100%;
+    width: 100%;
+}
+#gridDisplayBox {
+    width: 80%;
+    height: 35%;
+}
+#flexGameContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
+    position: relative; 
+    top: 7%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+
+}
+.backgroundImg {
+    display: none;
+}
+#controlBox {
+    width: 80%;
+    height: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+@media only screen and (min-width: 600px){
+    h1 {
+        font-size: 2.2rem;
+    }  
+    h2 {
+        font-size: .8rem;
+    }  
+    .toggleText {
+        font-size: .5rem;
+    } 
+    #colorPicker {
+        height: 1.8rem;
+    }
+    .buttonsBox button {
+        font-size: .8rem;
+        padding: .1rem 0;
+        width: 4rem;
+    }    
+}@media only screen and (min-width: 700px){
+    h1 {
+        font-size: 2.3rem;
+    }  
+    h2 {
+        font-size: .8rem;
+    }  
+    .toggleText {
+        font-size: .5rem;
+    } 
+    #colorPicker {
+        height: 1.8rem;
+    }
+    .buttonsBox button {
+        font-size: .8rem;
+        padding: .1rem 0;
+        width: 4rem;
+    }    
+}
+@media only screen and (min-width: 750px){
+    h1 {
+        font-size: 2.5rem;
+    }  
+    h2 {
+        font-size: .9rem;
+    }  
+    .toggleText {
+        font-size: .6rem;
+    } 
+    #colorPicker {
+        height: 2rem;
+    }
+    .buttonsBox button {
+        font-size: .9rem;
+        padding: .2rem 0;
+        width: 5rem;
+    }    
+}
+@media only screen and (min-width: 800px){
+    h1 {
+        font-size: 2.7rem;
+    } 
+    h2 {
+        font-size: 1rem;
+    }  
+    #colorPicker {
+        height: 2.5rem;
+    }  
+}
+@media only screen and (min-width: 900px){
+    h1 {
+        font-size: 3.25rem;
+    } 
+    h2 {
+        font-size: 1.1rem;
+    }    
+    #colorPicker {
+        height: 3rem;
+    }
+    .buttonsBox button {
+        font-size: 1rem;
+        padding: .3rem 0;
+        width: 6rem;
+    } 
+}
+@media only screen and (min-width: 1100px){
+    h1 {
+        font-size: 3.5rem;
+    } 
+    h2 {
+        font-size: 1.2rem;
+    }  
+    #colorPicker {
+        height: 3.5rem;
+    }
+    .buttonsBox button {
+        font-size: 1.1rem;
+        padding: .4rem 0;
+        width: 7rem;
+    }  
+}
+@media only screen and (min-width: 1200px){
+    h1 {
+        font-size: 4rem;
+    }   
+    h2 {
+        font-size: 1.3rem;
+    }  
+    .toggleText {
+        font-size: .9rem;
+    }
+    #colorPicker {
+        height: 4rem;
+    } 
+}
+@media only screen and (min-width: 1350px) {
+    h2 {
+        font-size: 1.5rem;
+    } 
+    .buttonsBox button {
+        font-size: 1.1rem;
+        padding: .4rem 0;
+        width: 7rem;
+    }  
+    #colorPicker {
+        height: 4.3rem;
+    }
+}
+@media only screen and (min-width: 1450px){
+    h1 {
+        font-size: 4.5rem;
+    }  
+    h2 {
+        font-size: 1.6rem;
+    }  
+    .toggleText {
+        font-size: 1rem;
+    }
+    .buttonsBox button {
+        font-size: 1.2rem;
+        padding: .5rem 0;
+        width: 8rem;
+    }
+    #colorPicker {
+        height: 4.5rem;
+    }
+}
+@media only screen and (min-width: 1600px){
+    h1 {
+        font-size: 5rem;
+    } 
+    h2 {
+        font-size: 1.7rem;
+    }  
+    .toggleText {
+        font-size: 1.1rem;
+    }  
+    #colorPicker {
+        height: 4.8rem;
+    }
+}
+@media only screen and (min-width: 1800px){
+    h1 {
+        font-size: 5.5rem;
+    }  
+    h2 {
+        font-size: 1.9rem;
+    }  
+    .toggleText {
+        font-size: 1.2rem;
+    } 
+    #colorPicker {
+        height: 8rem;
+    }
+}
