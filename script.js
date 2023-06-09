@@ -66,7 +66,7 @@ function resetGrid() {
 
 // ******* ---------- EVENT LISTENERS - FOR DRAWING---------- ******* //
 
-gridDisplayBox.addEventListener('mousedown', () => {
+gridDisplayBox.addEventListener('mousedown', (e) => {
     gridDisplayBox.addEventListener('mousemove', draw);
     gridDisplayBox.addEventListener('mouseup', stopDraw);
 })

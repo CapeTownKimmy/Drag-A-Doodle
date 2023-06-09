@@ -274,8 +274,12 @@ h2 {
     cursor: crosshair;
 }
 
-
-
+/* ------------------ PREVENT SELECTION WHEN DRAWING ------------------ */
+.preventSelect {
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+}
 
 /* ------------------ MEDIA QUERIES ------------------ */
 
