@@ -72,13 +72,15 @@ gridDisplayBox.addEventListener('mousedown', (e) => {
 })
 
 
+
+
 // ******* ------- DRAWING FUNCTIONS ------- ******* //
 function draw(e){
     e.preventDefault();
     if(newColor){
         e.target.style.backgroundColor = newColor;
     } else {
-        e.target.style.backgroundColor = '#945ec9';
+        e.target.style.backgroundColor = '#381f51';
     }  
 }
 function stopDraw(e) {
@@ -89,7 +91,7 @@ function stopDraw(e) {
 
 
 // ******* ---------- RESET BUTTON - EVENT LISTENERS ---------- ******* //
-resetBtn.addEventListener('click', () => {
+resetBtn.addEventListener('click', (e) => {
     resetGrid();
     createDiv(sliderValue.value);
 });
@@ -107,7 +109,7 @@ function addEraseListener(e){
 //Erase when mouse moving BUT switches back to draw on mouse up
 function eraseOnMove(){
     gridDisplayBox.addEventListener('mousemove', erase)
-    gridDisplayBox.addEventListener('mouseup', () => {
+    gridDisplayBox.addEventListener('mouseup', (e) => {
         gridDisplayBox.removeEventListener('mousemove', erase);
         gridDisplayBox.removeEventListener('mousedown', eraseOnMove);
     })
