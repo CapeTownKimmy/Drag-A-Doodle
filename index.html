@@ -15,43 +15,43 @@
     
 
     <div id="onTopContainer">
-        <img class="backgroundImg" src="./images/sketchBookMulti2.jpg" alt="Top down image of notebook on colourful background">
-        <h1>Drag - A - Doodle</h1>
+        <img class="backgroundImg preventSelect" src="./images/sketchBookMulti2.jpg" alt="Top down image of notebook on colourful background">
+        <h1 class="preventSelect">Drag - A - Doodle</h1>
 
         <div id="flexGameContainer">
             <div id="controlBox">
                 <div class="gridSizeBox">
-                    <h2>Grid Size:</h2>
+                    <h2 class="preventSelect">Grid Size:</h2>
                     <div class="gridIconsAndSlider">
-                        <img class="icons" id="largeHash" src="./images/hashLargeIcon.png" alt="Large grid size">
+                        <img class="icons preventSelect" id="largeHash" src="./images/hashLargeIcon.png" alt="Large grid size">
                         <input type="range" name="slider" id="gridSlider" min="8" max="96" step="8">
-                        <img class="icons" id="smallHash" src="./images/hashSmallIcon.png" alt="Small grid size"> 
+                        <img class="icons preventSelect" id="smallHash" src="./images/hashSmallIcon.png" alt="Small grid size"> 
                     </div>
                 </div>
   
                 <div id="gridToggle">
-                    <h2 class="padding text">Grid:</h2>
+                    <h2 class="padding text preventSelect">Grid:</h2>
                     <div class="flexToggleContainer">
-                        <h3 class="toggleText" for="toggle">On</h3>
+                        <h3 class="toggleText preventSelect" for="toggle">On</h3>
                         <label class="switch">
                             <input type="checkbox" checked id="toggle">
                             <span class="slider round"></span>
                         </label>
-                        <h3 class="toggleText" for="toggle">Off</h3>
+                        <h3 class="toggleText preventSelect" for="toggle">Off</h3>
                     </div>
 
                 </div>
 
                 <div class="colorPickerBox">
                     <div id="colorItems">
-                        <h2 class="padding">Colour:</h2>
-                        <input type="color" name="colorPicker" id="colorPicker" value="#945ec9">
+                        <h2 class="padding preventSelect">Colour:</h2>
+                        <input type="color" name="colorPicker" id="colorPicker" value="#381f51">
                     </div>
                 </div>
                 
                 <div class="buttonsBox">
-                    <button id="resetBtn">Reset</button>
-                    <button id="eraseBtn">Erase</button>
+                    <button id="resetBtn" class="preventSelect">Reset</button>
+                    <button id="eraseBtn" class = "preventSelect">Erase</button>
                 </div>
             </div>
 

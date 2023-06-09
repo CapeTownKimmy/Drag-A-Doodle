@@ -3,7 +3,10 @@
 
 This challenge is part of The Odin Projects foundation course, it gives basic prompts on what to do but leaves how to implement your ideas completely open and as such is a daunting task to a beginner. 
 
-I have made the game as responsive to screen size as possible but best displayed and played on a computer rather than mobile. The game does work on a tablet however resetting is required for loading a new grid as it doesn't work automatically.
+
+I have made the game as responsive to screen size as possible but best displayed and played on a computer rather than tablet or mobile as I could not get the pointer events to work as well as the current mouse events.
+=======
+
 
 ---
 
