@@ -5,8 +5,6 @@ This challenge is part of The Odin Projects foundation course, it gives basic pr
 
 
 I have made the game as responsive to screen size as possible but best displayed and played on a computer rather than tablet or mobile as I could not get the pointer events to work as well as the current mouse events.
-=======
-
 
 ---
 
