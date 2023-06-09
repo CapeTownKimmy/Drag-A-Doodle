@@ -3,7 +3,10 @@
 
 This challenge is part of The Odin Projects foundation course, it gives basic prompts on what to do but leaves how to implement your ideas completely open and as such is a daunting task to a beginner. 
 
+
 I have made the game as responsive to screen size as possible but best displayed and played on a computer rather than tablet or mobile as I could not get the pointer events to work as well as the current mouse events.
+=======
+
 
 ---
 
@@ -12,7 +15,7 @@ I have made the game as responsive to screen size as possible but best displayed
 * Toggle your grid lines on or off, even while you draw!
 * Pick as many colours as you wish
 * Just drag to draw and erase!
-#### Create your own: **[Play Here!]()**
+#### Create your own: **[Play Here!](https://capetownkimmy.github.io/Drag-A-Doodle/)**
 
 ![Screenshot of game UI](./images/Screenshot-start.jpg)
 
